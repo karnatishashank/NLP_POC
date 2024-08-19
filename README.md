@@ -12,3 +12,6 @@ python3 app.py
 
 URL to open the project:
 http://127.0.0.1:5000/
+
+
+Link for the documents and video presentation: https://drive.google.com/drive/folders/11p3VTNkthWM_xae3o1ncVh4edPws4H3U?usp=sharing
