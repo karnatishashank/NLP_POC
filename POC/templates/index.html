@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and File Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Text and File Analysis</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    <form method="POST" enctype="multipart/form-data">
+        <label for="text_input">Enter text:</label><br>
+        <textarea name="text_input" id="text_input" rows="5" cols="50"></textarea><br>
+        <label for="file">Or upload a file:</label><br>
+        <input type="file" name="file" id="file"><br><br>
+        <input type="submit" value="Analyze">
+    </form>
+</body>
+</html>
